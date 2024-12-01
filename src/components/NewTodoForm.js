@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 
-const NewTodoForm = () => {
+const NewTodoForm = (props) => {
+    const { addTodo } = props;
+
     const [description, setDescription] = useState('');
     const [assigned, setAssigned] = useState('');
+
+    const submitTodo = () => {
+        if (description && assigned) {
+            addTodo(description, assigned);
+            setDescription('');
+            setAssigned('');
+        }
+    };
 
     return (
         <div className="mt-5">
@@ -31,7 +41,11 @@ const NewTodoForm = () => {
                         value={description}
                     />
                 </div>
-                <button className="btn btn-primary" type="button">
+                <button
+                    className="btn btn-primary"
+                    type="button"
+                    onClick={submitTodo}
+                >
                     Add Todo
                 </button>
             </form>
