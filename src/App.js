@@ -2,13 +2,13 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-        <div>
-          <div>
+    <div className='mt-5 container'>
+        <div className='card'>
+          <div className='card-header'>
             Your Todo's
           </div>
-          <div>
-            <table>
+          <div className='card-body'>
+            <table class="table table-hover">
               <thead>
                 <tr>
                   <th scope='col'>#</th>
@@ -24,7 +24,7 @@ function App() {
                 </tr>
                 <tr>
                   <th scope='row'>2</th>
-                  <td>Get hair cut</td>
+                  <td>Get haircut</td>
                   <td>Eric</td>
                 </tr>
               </tbody>
