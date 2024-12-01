@@ -14,6 +14,11 @@ function App() {
             rowDescription: 'Make dinner',
             rowAssigned: 'User One',
         },
+		{
+            rowNumber: 4,
+            rowDescription: 'Charge phone battery',
+            rowAssigned: 'User One',
+        },
     ];
 
     return (
