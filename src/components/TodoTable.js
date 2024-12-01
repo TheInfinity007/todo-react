@@ -4,7 +4,7 @@ const TodoTable = (props) => {
     const todos = props.todos;
 
     return (
-        <table class="table table-hover">
+        <table className="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
