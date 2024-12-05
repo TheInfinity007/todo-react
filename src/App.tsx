@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
-import TodoTable from './components/TodoTable';
-import NewTodoForm from './components/NewTodoForm';
+import { TodoTable } from './components/TodoTable';
+import { NewTodoForm } from './components/NewTodoForm';
 
-function App() {
+export const App = () => {
     const [showAddTodoForm, setShowAddTodoForm] = useState(false);
 
     const [todos, setTodos] = useState([
@@ -58,7 +58,7 @@ function App() {
                         className="btn btn-primary"
                         onClick={() => setShowAddTodoForm(!showAddTodoForm)}
                     >
-                        {showAddTodoForm ? 'Close New Todo': 'New Todo'}
+                        {showAddTodoForm ? 'Close New Todo' : 'New Todo'}
                     </button>
 
                     {showAddTodoForm && <NewTodoForm addTodo={addTodo} />}
@@ -66,6 +66,4 @@ function App() {
             </div>
         </div>
     );
-}
-
-export default App;
+};
