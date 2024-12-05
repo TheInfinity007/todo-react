@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoRowItem from './TodoRowItem';
 
-const TodoTable = (props) => {
+const TodoTable = (props: { todos: TodoModel[]; deleteTodo: Function }) => {
     const todos = props.todos;
 
     return (
@@ -14,7 +14,7 @@ const TodoTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {todos.map((todo) => (
+                {todos.map((todo: TodoModel) => (
                     <TodoRowItem
                         key={todo.rowNumber}
                         rowNumber={todo.rowNumber}

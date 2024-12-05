@@ -1,6 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const TodoRowItem = (props) => {
+const TodoRowItem = (props: {
+    rowNumber: number;
+    rowDescription: string;
+    rowAssigned: string;
+    deleteTodo: Function;
+}) => {
     const { rowNumber, rowDescription, rowAssigned } = props;
 
     return (
